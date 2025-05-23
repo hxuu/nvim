@@ -5,7 +5,8 @@ return {
 
         default = {
             -- file and directory options
-            dir_path = "$HOME/hxuu/static/images", ---@type string
+            dir_path = "/home/hxuu/Blog/static/images", ---@type string
+            -- dir_path = "screenshots", ---@type string
             extension = "png", ---@type string
             file_name = "%Y-%m-%d-%H-%M-%S", ---@type string
             use_absolute_path = true, ---@type boolean
