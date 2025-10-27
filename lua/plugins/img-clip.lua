@@ -5,12 +5,12 @@ return {
 
         default = {
             -- file and directory options
-            dir_path = "/home/hxuu/Blog/static/images", ---@type string
-            -- dir_path = "screenshots", ---@type string
+            -- dir_path = "/home/hxuu/blog/static/images", ---@type string
+            dir_path = "screenshots", ---@type string
             extension = "png", ---@type string
             file_name = "%Y-%m-%d-%H-%M-%S", ---@type string
-            use_absolute_path = true, ---@type boolean
-            relative_to_current_file = false, ---@type boolean
+            use_absolute_path = false, ---@type boolean
+            relative_to_current_file = true, ---@type boolean
 
             -- template options
             template = "$FILE_PATH", ---@type string
