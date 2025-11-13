@@ -54,36 +54,37 @@ return {
             }
         })
 
-        local lspconfig = require("lspconfig")
+        -- local lspconfig = require("lspconfig")
+        local lspconfig = vim.lsp and vim.lsp.config or require("lspconfig")
         local dartExcludedFolders = {
             vim.fn.expand("$HOME/.pub-cache"),
             vim.fn.expand("$HOME/flutter/.pub-cache"),
         }
 
-        lspconfig["dartls"].setup({
-            capabilities = capabilities,
-            cmd = {
-                "dart",
-                "language-server",
-                "--protocol=lsp",
-            },
-            filetypes = { "dart" },
-            init_options = {
-                onlyAnalyzeProjectsWithOpenFiles = false,
-                suggestFromUnimportedLibraries = true,
-                closingLabels = true,
-                outline = false,
-                flutterOutline = false,
-            },
-            settings = {
-                dart = {
-                    analysisExcludedFolders = dartExcludedFolders,
-                    updateImportsOnRename = true,
-                    completeFunctionCalls = true,
-                    showTodos = true,
-                },
-            },
-        })
+        -- lspconfig["dartls"].setup({
+        --     capabilities = capabilities,
+        --     cmd = {
+        --         "dart",
+        --         "language-server",
+        --         "--protocol=lsp",
+        --     },
+        --     filetypes = { "dart" },
+        --     init_options = {
+        --         onlyAnalyzeProjectsWithOpenFiles = false,
+        --         suggestFromUnimportedLibraries = true,
+        --         closingLabels = true,
+        --         outline = false,
+        --         flutterOutline = false,
+        --     },
+        --     settings = {
+        --         dart = {
+        --             analysisExcludedFolders = dartExcludedFolders,
+        --             updateImportsOnRename = true,
+        --             completeFunctionCalls = true,
+        --             showTodos = true,
+        --         },
+        --     },
+        -- })
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
